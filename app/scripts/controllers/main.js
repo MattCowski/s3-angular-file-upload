@@ -18,7 +18,7 @@ angular.module('s3UploadApp')
                     $http.get('/api/s3Policy?mimeType='+ file.type).success(function(response) {
                         var s3Params = response;
                         $scope.upload[i] = $upload.upload({
-                            url: 'https://mybucket-dev.s3.amazonaws.com/',
+                            url: 'https://mybucket-dev123.s3-us-west-2.amazonaws.com/',
                                 method: 'POST',
                             data: {
                                 'key' : 's3UploadExample/'+ Math.round(Math.random()*10000) + '$$' + file.name,
